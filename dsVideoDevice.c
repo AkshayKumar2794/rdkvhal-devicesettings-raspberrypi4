@@ -46,7 +46,8 @@ dsError_t  dsGetVideoDevice(int index, intptr_t *handle)
     {
         return dsERR_INVALID_PARAM;
     }
-    return dsERR_OPERATION_NOT_SUPPORTED;
+    *handle = 0;
+    return dsERR_NONE;
 }
 
 dsError_t  dsSetDFC(intptr_t handle, dsVideoZoom_t dfc)
