@@ -361,6 +361,7 @@ dsError_t  dsIsDisplayConnected(intptr_t handle, bool *connected)
 	{
                 printf("Isdisplayconnected HDMI port");
                 if( vc_tv_get_display_state( &tvstate ) == 0) {
+                     printf("tvstate.state == %d\n",tvstate.state);
                      if (tvstate.state & VC_HDMI_ATTACHED) {
                          printf("HDMI is connected\n");
                          *connected = true;
